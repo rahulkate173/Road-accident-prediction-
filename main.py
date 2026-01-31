@@ -14,7 +14,7 @@ model = joblib.load(model_path)
 scalar = joblib.load(scalar_path)
 
 def feature_engineering(train_df):
-    # retio and product
+    # ratio and product
     train_df['Density_Index'] = train_df['speed_limit'] / train_df['num_lanes']
     train_df['Complex_Risk'] = train_df['curvature'] * train_df['speed_limit']
     train_df['Accident_Rate'] = train_df['num_reported_accidents'] / train_df['num_lanes']
